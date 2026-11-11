@@ -4,6 +4,15 @@
 
 A small desktop "Challenges" hub with two classic games, each playable against a friend or the computer.
 
+![Challenges menu](screenshots/menu.png)
+
+## Screenshots
+
+| Connect 4 | Tic-Tac-Toe | Connect 4 vs Computer |
+|---|---|---|
+| ![Connect 4 win](screenshots/connect4.png) | ![Tic-Tac-Toe win](screenshots/tictactoe.png) | ![Connect 4 vs computer](screenshots/connect4-vs-computer.png) |
+| Blue wins on a diagonal; the winning line is highlighted | X wins with the diagonal highlighted and the score updated | The computer (Red) blocking Blue's moves mid-game |
+
 ## Games
 
 | Game | vs Friend | vs Computer |
