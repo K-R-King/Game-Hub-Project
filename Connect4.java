@@ -32,10 +32,22 @@ public class Connect4 implements ActionListener{
     //  }
 
 
+    // Loads a piece image from next to the game's class files (or inside a jar),
+    // falling back to the current folder, so the images are found no matter
+    // which folder the game is started from.
+    static ImageIcon loadIcon(String name) {
+        java.net.URL url = Connect4.class.getResource(name);
+        if (url != null) {
+            return new ImageIcon(url);
+        }
+        return new ImageIcon(name);
+    }
+
+
     public void Connect4(){
 
 
-        imageIconDflt = new ImageIcon("whiteIcon.png");
+        imageIconDflt = Connect4.loadIcon("whiteIcon.png");
         System.out.println("Connect 4");
         player = "Blue";
         System.out.println("Turn of Player: " + player);
@@ -74,7 +86,7 @@ public class Connect4 implements ActionListener{
 
 
         topPanel.setLayout(new BorderLayout());
-        ImageIcon imageIcon = new ImageIcon("redIcon.png");
+        ImageIcon imageIcon = Connect4.loadIcon("redIcon.png");
         Image image = imageIcon.getImage();
         Image scaledImage = image.getScaledInstance(75, 75, Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(scaledImage);
@@ -82,7 +94,7 @@ public class Connect4 implements ActionListener{
         topPanel.add(imageLabel, BorderLayout.WEST);
 
 
-        ImageIcon imageIcon2 = new ImageIcon("blueIcon.png");
+        ImageIcon imageIcon2 = Connect4.loadIcon("blueIcon.png");
         Image image2 = imageIcon2.getImage();
         Image scaledImage2 = image2.getScaledInstance(75, 75, Image.SCALE_SMOOTH);
         ImageIcon scaledIcon2 = new ImageIcon(scaledImage2);
@@ -107,7 +119,7 @@ public class Connect4 implements ActionListener{
                 buttons[row][col].setBackground(new Color(255, 255, 255));
                 buttons[row][col].setFont(new Font("MV Boli", Font.BOLD, 120));
                 buttons[row][col].setFocusable(false);
-                imageIconDflt.setImage(new ImageIcon("whiteIcon.png").getImage());
+                imageIconDflt.setImage(Connect4.loadIcon("whiteIcon.png").getImage());
                 Image imageDflt = imageIconDflt.getImage();
                 Image scaledImageDflt = imageDflt.getScaledInstance(75, 75, Image.SCALE_SMOOTH);
                 ImageIcon scaledIconDflt = new ImageIcon(scaledImageDflt);
@@ -195,7 +207,7 @@ public class Connect4 implements ActionListener{
                     buttons[row][col].setBackground(new Color(255, 255, 255));
 
 
-                    imageIconDflt.setImage(new ImageIcon("whiteIcon.png").getImage());
+                    imageIconDflt.setImage(Connect4.loadIcon("whiteIcon.png").getImage());
                     Image imageDflt = imageIconDflt.getImage();
                     Image scaledImageDflt = imageDflt.getScaledInstance(75, 75, Image.SCALE_SMOOTH);
                     ImageIcon scaledIconDflt = new ImageIcon(scaledImageDflt);
@@ -313,14 +325,14 @@ public class Connect4 implements ActionListener{
 
 
         if (player == "Blue"){
-            imageIcon.setImage(new ImageIcon("blueIcon.png").getImage());
+            imageIcon.setImage(Connect4.loadIcon("blueIcon.png").getImage());
             Image image = imageIcon.getImage();
             Image scaledImage = image.getScaledInstance(75, 75, Image.SCALE_SMOOTH);
             ImageIcon scaledIcon = new ImageIcon(scaledImage);
             buttons[clickedRow][clickedCol].setIcon(scaledIcon);
         }
         else{
-            imageIcon.setImage(new ImageIcon("redIcon.png").getImage());
+            imageIcon.setImage(Connect4.loadIcon("redIcon.png").getImage());
             Image image = imageIcon.getImage();
             Image scaledImage = image.getScaledInstance(75, 75, Image.SCALE_SMOOTH);
             ImageIcon scaledIcon = new ImageIcon(scaledImage);

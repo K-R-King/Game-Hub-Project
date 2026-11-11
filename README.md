@@ -27,7 +27,7 @@ A small desktop "Challenges" hub with two classic games, each playable against a
 
 ## How to run
 
-Requires Java 8 or newer (tested on Java 17).
+Requires Java 8 or newer (tested on Java 17 and Java 25).
 
 ```bash
 cd Game-Hub
@@ -35,7 +35,7 @@ javac *.java
 java Challenges
 ```
 
-Run it from the project folder so the piece images (`redIcon.png`, `blueIcon.png`, `whiteIcon.png`) are found.
+The piece images (`redIcon.png`, `blueIcon.png`, `whiteIcon.png`) are loaded from next to the compiled classes, so the game works no matter which folder you start it from.
 
 ## 2026 restoration fixes
 
