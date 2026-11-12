@@ -30,7 +30,7 @@ A small desktop "Challenges" hub with two classic games, each playable against a
 Requires Java 8 or newer (tested on Java 17 and Java 25).
 
 ```bash
-cd Game-Hub
+cd Java-Swing-Game-Hub
 javac *.java
 java Challenges
 ```
