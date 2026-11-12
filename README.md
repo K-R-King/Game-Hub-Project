@@ -1,4 +1,4 @@
-# Game Hub
+# Java Swing Game Hub
 
 > **Project from 2023.** A Java Swing game hub I built in 2023, restored and bug-fixed in 2026.
 
